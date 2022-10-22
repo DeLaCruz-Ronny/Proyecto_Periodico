@@ -1,0 +1,35 @@
+﻿@model Usuario
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_LayoutADM.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h5 class="text-center">Eliminar Usuario</h5>
+    </div>
+    <div class="card-body">
+        <form method="post" asp-action="Delete" asp-controller="Usuarios">
+            <div class="row">
+                <div class="col-12 mb-3">
+                    <input asp-for="IdUsuario" type="hidden" />
+                </div>
+                <div class="col-5 mb-3">
+                    <input asp-for="Nombre" type="text" class="form-control" placeholder="Nombre" readonly />
+                </div>
+                <div class="col-5 mb-3">
+                    <input asp-for="Apellido" type="text" class="form-control" placeholder="Apellido" readonly />
+                </div>
+                <div class="col-5 mb-3">
+                    <input asp-for="Correo" type="email" class="form-control" placeholder="Correo" readonly />
+                </div>
+                <div class="col-5 mb-3">
+                    <input asp-for="Clave" type="password" class="form-control" placeholder="Clave" readonly />
+                </div>
+            </div>
+            <hr />
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+            <a asp-action="Index" asp-controller="Usuarios" type="button" class="btn btn-secondary">Atras</a>
+        </form>
+    </div>
+</div>

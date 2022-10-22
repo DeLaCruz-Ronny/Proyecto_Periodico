@@ -1,0 +1,32 @@
+﻿@model Categoria
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_LayoutADM.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h1 class="text-center">Agregar Categoria</h1>
+    </div>
+    <div class="card-body">
+        <form method="post" asp-action="Create" asp-controller="Categoria">
+            <div class="row">
+                <div class="col-12 mb-3">
+                    <input asp-for="Nombre" type="text" class="form-control" placeholder="Nombre Categoria" required />
+                </div>
+                @*<div class="col-5 mb-3">
+                    <input asp-for="Apellido" type="text" class="form-control" placeholder="Apellido" required />
+                </div>
+                <div class="col-5 mb-3">
+                    <input asp-for="Correo" type="email" class="form-control" placeholder="Correo" required />
+                </div>
+                <div class="col-5 mb-3">
+                    <input asp-for="Clave" type="password" class="form-control" placeholder="Clave" required />
+                </div>*@
+            </div>
+            <hr />
+            <button type="submit" class="btn btn-info">Guardar</button>
+            <a asp-action="Index" asp-controller="Categoria" type="button" class="btn btn-secondary">Atras</a>
+        </form>
+    </div>
+</div>

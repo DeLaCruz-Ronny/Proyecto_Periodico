@@ -1,0 +1,35 @@
+﻿@model Categoria
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_LayoutADM.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h1 class="text-center">Editar Categoria</h1>
+    </div>
+    <div class="card-body">
+        <form method="post" asp-action="Edit" asp-controller="Categoria">
+            <div class="row">
+                <div class="col-12 mb-3">
+                    <input asp-for="IdCategoria" type="hidden" />
+                </div>
+                <div class="col-12 mb-3">
+                    <input asp-for="Nombre" type="text" class="form-control" placeholder="Nombre Categoria" required />
+                </div>
+                @*<div class="col-5 mb-3">
+                    <input asp-for="Apellido" type="text" class="form-control" placeholder="Apellido" required />
+                </div>
+                <div class="col-5 mb-3">
+                    <input asp-for="Correo" type="email" class="form-control" placeholder="Correo" required />
+                </div>
+                <div class="col-5 mb-3">
+                    <input asp-for="Clave" type="password" class="form-control" placeholder="Clave" required />
+                </div>*@
+            </div>
+            <hr />
+            <button type="submit" class="btn btn-info">Guardar</button>
+            <a asp-action="Index" asp-controller="Categoria" type="button" class="btn btn-secondary">Atras</a>
+        </form>
+    </div>
+</div>
